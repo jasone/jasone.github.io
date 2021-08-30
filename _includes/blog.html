@@ -1,0 +1,43 @@
+<h2 {% if site.style == 'dark' %}class="text-white"{% endif %}>Blog</h2>
+<p class="f4 mb-4 {% if site.style == 'dark' %}text-white{% else %}text-gray{% endif %}">Articles I've written.</p>
+<ul style="list-style: none;">
+  {% for post in site.posts %}
+    {% capture year_cur %}{{ post.date | date: "%Y" }}{% endcapture %}
+    {% capture month_cur %}{{ post.date | date: "%B" }}{% endcapture %}
+    {% capture year_next %}{{ post.next.date | date: "%Y" }}{% endcapture %}
+    {% capture month_next %}{{ post.next.date | date: "%B" }}{% endcapture %}
+
+    {% if forloop.first %}
+  <ul style="list-style: none; padding-left:0px">
+    <li> <h4>{{year_cur}}</h4> </li>
+    <ul style="list-style: none; padding-left:20px">
+      <li> <h5>{{month_cur}}</h5> </li>
+      <ul style="list-style: none; padding-left:0px">
+        <li> <a href="{{ post.url }}">{{ post.title }}</a> </li>
+
+    {% elsif year_cur == year_next and month_cur == month_next %}
+        <li> <a href="{{ post.url }}">{{ post.title }}</a> </li>
+
+    {% elsif year_cur == year_next and month_cur != month_next %}
+      </ul>
+      <li> <h5>{{month_cur}}</h5> </li>
+      <ul style="list-style: none; padding-left:0px">
+        <li> <a href="{{ post.url }}">{{ post.title }}</a> </li>
+
+    {% elsif year_cur != year_next %}
+      </ul>
+    </ul>
+  </ul>
+
+  <ul style="list-style: none; padding-left:0px">
+    <li> <h4>{{year_cur}}</h4> </li>
+    <ul style="list-style: none; padding-left:20px">
+      <li> <h5>{{month_cur}}</h5> </li>
+      <ul style="list-style: none; padding-left:0px">
+        <li> <a href="{{ post.url }}">{{ post.title }}</a> </li>
+    {% endif %}
+  {% endfor %}
+      </ul>
+    </ul>
+  </ul>
+</ul>
