@@ -5,7 +5,7 @@ categories: blog
 ---
 
 I uploaded an updated version of the [Parsing
-module](http://www.canonware.com/download/Parsing/Parsing.py).  The changes are
+module](/files/Parsing/Parsing.py).  The changes are
 minor, which is a good indicator of the code's maturity when you consider that I
 continue to use it heavily to create new parsers.  This is a really solid parser
 generator, yet the public reception has been overwhelming silence.

@@ -34,7 +34,7 @@ need Python 2.5.  As far as I know, the `(... if ... else ...)` expression
 syntax is the only reason for this dependency, so if you want to use Parsing.py
 with an older Python interpreter, porting it should not cause you much trouble.
 
-Okay, without further delay, here it is: <http://www.canonware.com/download/Parsing/Parsing.py>
+Okay, without further delay, here it is: [Parsing.py](/files/Parsing/Parsing.py)
 
 ### Comments
 

@@ -6,11 +6,11 @@ categories: blog
 
 In a previous blog entry, I discussed the [difficulties associated with
 implementing left-leaning red-black
-trees](http://www.canonware.com/%7Ettt/2008/04/left-leaning-red-black-trees-are-hard.html).
+trees](/2008/04/21/left-leaning-red-black-trees-are-hard/).
 A couple of readers commented that [treaps](http://en.wikipedia.org/wiki/Treap)
 might be superior to [red-black
 trees](http://en.wikipedia.org/wiki/Red-black_tree), and as part of some
-[recent](http://www.canonware.com/%7Ettt/2008/07/overzealous-use-of-my-red-black-tree.html)
+[recent](/2008/07/24/overzealous-use-of-my-red-black-tree/)
 jemalloc optimization work, I had occasion to implement treaps in order to
 measure tree operation overhead.
 
@@ -27,15 +27,15 @@ Regardless however, treaps are _way_ easier to implement than red-black trees.
 As for benchmarking, I wrote functionally identical benchmark programs for three
 red-black tree implementations and two treap implementations.  The tree
 implementations are:
-- [**rb\_new**](http://www.canonware.com/download/rb/rb_new/): Left-leaning
+- [**rb\_new**](/files/rb/rb_new/): Left-leaning
   red-black trees.
-- [**rb\_old**](http://www.canonware.com/download/rb/rb_old/): Standard
+- [**rb\_old**](/files/rb/rb_old/): Standard
   red-black trees.
-- [**RB**](http://www.canonware.com/download/rb/tree/): Standard red-black
+- [**RB**](/files/rb/tree/): Standard red-black
   trees, as implemented by the \*BSD sys/tree.h.
-- [**trp\_hash**](http://www.canonware.com/download/trp/trp_hash/): Treaps, with
+- [**trp\_hash**](/files/trp/trp_hash/): Treaps, with
   priorities computed via pointer hashing.
-- [**trp\_prng**](http://www.canonware.com/download/trp/trp_prng/): Treaps, with
+- [**trp\_prng**](/files/trp/trp_prng/): Treaps, with
   priorities computed via pseudo-random number generation (PRNG).
 
 The benchmark programs iteratively generate permutations of NNODES nodes, for
@@ -109,7 +109,7 @@ interest in optimizing for C vs. C++.
 
 Thanx!
 
--Tomas  
+-Tomas
 http://fuel7.com/
 
 ---
@@ -129,7 +129,7 @@ nodes, whereas the maximum height for left-leaning red-black trees is (3*lg n).
 If I recall correctly, ordered left-to-right insertion will exercise the worst
 case.
 
-You can find links to test and benchmark programs on my [red-black tree web page](http://www.canonware.com/rb/), as well as my email address.
+You can find links to test and benchmark programs on my [red-black tree web page](/files/rb/), as well as my email address.
 
-Thanks,  
+Thanks,
 Jason

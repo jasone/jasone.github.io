@@ -5,8 +5,8 @@ categories: blog
 ---
 
 As requested by several people, I have uploaded a simple [example
-parser](http://www.canonware.com/download/Parsing/examples/example1.py) that
-uses the [Parsing](http://www.canonware.com/download/Parsing/Parsing.py) module.
+parser](/files/Parsing/examples/example1.py) that
+uses the [Parsing](/files/Parsing/Parsing.py) module.
 It is pretty self explanatory, so I encourage you to take a look at it, run it,
 and experiment with changes.
 
