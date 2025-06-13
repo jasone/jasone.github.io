@@ -78,7 +78,7 @@ significant functionality. Version 3.0.0 introduced extensive testing infrastruc
 [JSON](https://en.wikipedia.org/wiki/JSON)-formatted telemetry. The 5.x series transitioned from
 "chunks" to "extents" to pave the way for better interaction with 2 MiB huge pages.
 
-Somewhat more controversially, I removed Valgrind support in 5.0.0. because it was a significant
+Somewhat more controversially, I removed Valgrind support in 5.0.0 because it was a significant
 maintenance complication (numerous tendrils in subtle places), and it was unused inside Facebook;
 other tools like `pprof` and [MemorySanitizer](https://clang.llvm.org/docs/MemorySanitizer.html)
 dominated. I had received very little feedback about Valgrind support, and extrapolated that it was
